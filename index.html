@@ -1,0 +1,1681 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Page Title</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Array of questions and their answer options
+      const questions = [
+
+        {
+          "question": "1. ASCII nədir?",
+          "answers": [
+            "Beynəlxalq kodlaşdırma sistemi",
+            "Milli kodlar cədvəli",
+            "Kodlar cədvəli",
+            "Universal kod",
+            "Milli COD"
+          ]
+        },
+        {
+          "question": "2. Unicode kodlaşdırma sistemində 1 simvolun kodlaşdırılması üçün neçə bayt yer ayrılır?",
+          "answers": [
+            "16 bit",
+            "4 bayt",
+            "1 bayt",
+            "5 bayt",
+            "3 bayt"
+          ]
+        },
+        {
+          "question": "3. İnformasiyanın ölçü vahidlərinin düzgün artma ardıcıllığını göstərin:",
+          "answers": [
+            "bayt, kilobayt, meqabayt",
+            "bit, qiqabayt, kilobayt",
+            "kilobayt, qiqabayt, meqabayt",
+            "bayt, meqabayt, kilobayt, qiqabayt",
+            "bayt, kilobayt, qiqabayt, meqabayt"
+          ]
+        },
+        {
+          "question": "4. Həcmi 16 bit olan informasiya neçə bayta bərabərdir?",
+          "answers": [
+            "2",
+            "8",
+            "16",
+            "1",
+            "4"
+          ]
+        },
+        {
+          "question": "5. 216 bit neçə baytdır?",
+          "answers": [
+            "27",
+            "28",
+            "16",
+            "32",
+            "31"
+          ]
+        },
+        {
+          "question": "6. TEXNOLOQ sözündə neçə bayt informasiya var?",
+          "answers": [
+            "8",
+            "5",
+            "6",
+            "7",
+            "9"
+          ]
+        },
+        {
+          "question": "7. “İnformatikanın əsasları” ifadəsi yaddaşda nə qədər yer tutur?",
+          "answers": [
+            "23 bayt",
+            "21 bit",
+            "20 bit",
+            "20 bayt",
+            "168 bayt"
+          ]
+        },
+        {
+          "question": "8. 213 bit neçə kilobaytdır?",
+          "answers": [
+            "1",
+            "3",
+            "5",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "question": "9. 2 mbayt neçə kbaytdır?",
+          "answers": [
+            "211",
+            "213",
+            "220",
+            "215",
+            "230"
+          ]
+        },
+        {
+          "question": "10. Gbayt neçə bitdir?",
+          "answers": [
+            "233",
+            "230",
+            "215",
+            "220",
+            "240"
+          ]
+        },
+        {
+          "question": "11. Kilobaytın səkkizdə bir hissəsindən ibarət məlumatda neçə bit informasiya vardır?",
+          "answers": [
+            "1024",
+            "4096",
+            "512",
+            "2048",
+            "256"
+          ]
+        },
+        {
+          "question": "12. 8192 Mbayt neçə Gbaytdır?",
+          "answers": [
+            "8",
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "question": "13. 32 Mbayt neçə baytdır?",
+          "answers": [
+            "225",
+            "236",
+            "246",
+            "235",
+            "226"
+          ]
+        },
+        {
+          "question": "14. Aşağıdakı ikilik ədədlərdən hansı kompüterin yaddaşında 1.5 bayt yer tutur?",
+          "answers": [
+            "101101101101",
+            "11010111",
+            "10011",
+            "1000000",
+            "1011010101111100"
+          ]
+        },
+        {
+          "question": "15. Aşağıdakı məlumatda verilmiş və ASCII - də kodlaşdırılmış simvolların sayını tapın.",
+          "answers": [
+            "6",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        {
+          "question": "16. Yaddaşda mətn, qrafik və video tipli informasiyalardan ibarət 20 Mb informasiya vardır. Əgər yaddaşdan 5Mb video, 5632 Kb qrafik və 4608 Kb mətn tipli informasiya silinərsə, qovluğun həcmi nə qədər olar?",
+          "answers": [
+            "5Mb",
+            "10Mb",
+            "5Kb",
+            "15Mb",
+            "5b"
+          ]
+        },
+        {
+          "question": "17. Mətnin saxlanması üçün yaddaşda 792 bit tələb olunur. Mətn neçə simvoldan ibarətdir?",
+          "answers": [
+            "99",
+            "700",
+            "792",
+            "800",
+            "145"
+          ]
+        },
+        {
+          "question": "18. 12 288 bit tutumlu informasiyanın həcmi neçə kilobaytdır?",
+          "answers": [
+            "1,5",
+            "102",
+            "3",
+            "5",
+            "8192"
+          ]
+        },
+        {
+          "question": "19. Qovluqda yerləşən faylların birlikdə həcminin 10MB olduğu məlumdur. Həmin qovluqdan həcmi 3, 5 MB - lıq video fayl, 2560 KB – lıq audi faylı sildikdən sonra qovluqda qalan faylların həcmi nə qədər olar?",
+          "answers": [
+            "4 MB",
+            "4.5 MB",
+            "6,5 MB",
+            "5 MB",
+            "2048 KB"
+          ]
+        },
+        {
+          "question": "20. Hər səhifədə 128 sətir, hər sətirdə 24 simvol olarsa 96 Kbayt yaddaşa neçə səhifə yazmaq olar?",
+          "answers": [
+            "32",
+            "43",
+            "10",
+            "21",
+            "65"
+          ]
+        },
+        {
+          "question": "21. Hər səhifədə 64 sətir, hər sətirdə 48 simvol olarsa 48 Kbayt yaddaşa neçə səhifə yazmaq olar?",
+          "answers": [
+            "16",
+            "21",
+            "6",
+            "31",
+            "11"
+          ]
+        },
+        {
+          "question": "22. Hər səhifədə 32 sətir, hər sətirdə 48 simvol olarsa 36 Kbayt yaddaşa neçəsəhifə yazmaq olar?",
+          "answers": [
+            "24",
+            "32",
+            "16",
+            "8",
+            "48"
+          ]
+        },
+        {
+          "question": "23. Hər səhifədə 64 sətir, hər sətirdə 24 simvol olarsa 72 Kbayt yaddaşa neçəsəhifə yazmaq olar?",
+          "answers": [
+            "48",
+            "64",
+            "16",
+            "32",
+            "96"
+          ]
+        },
+        {
+          "question": "24. Hər səhifədə 40 sətir, hər sətirdə 64 simvol olarsa 20 Kbayt yaddaşa neçəsəhifə yazmaq olar?",
+          "answers": [
+            "8",
+            "17",
+            "11",
+            "2",
+            "5"
+          ]
+        },
+        {
+          "question": "25. Hər səhifədə 160 sətir, hər sətirdə 96 simvol olarsa 480 Kbayt yaddaşa neçəsəhifə yazmaq olar?",
+          "answers": [
+            "32",
+            "21",
+            "43",
+            "10",
+            "65"
+          ]
+        },
+        {
+          "question": "26. Hər səhifədə 64 sətir, hər sətirdə 64 simvol olarsa 64 Kbayt yaddaşa neçə səhifə yazmaq olar?",
+          "answers": [
+            "16",
+            "21",
+            "6",
+            "11",
+            "31"
+          ]
+        },
+        {
+          "question": "27. Hər səhifədə 24 sətir, hər sətirdə 256 simvol olarsa 48 Kbayt yaddaşa neçə səhifə yazmaq olar?",
+          "answers": [
+            "8",
+            "2",
+            "5",
+            "11",
+            "17"
+          ]
+        },
+        {
+          "question": "28. Hər səhifədə 160 sətir, hər sətirdə 64 simvol olarsa 320 Kbayt yaddaşa neçəsəhifə yazmaq olar?",
+          "answers": [
+            "32",
+            "43",
+            "10",
+            "21",
+            "65"
+          ]
+        },
+        {
+          "question": "29. Hər səhifədə 24 sətir, hər sətirdə 24 simvol olarsa 4,5 Kbayt yaddaşa neçə səhifə yazmaq olar?",
+          "answers": [
+            "8",
+            "2",
+            "5",
+            "11",
+            "17"
+          ]
+        },
+        {
+          "question": "30. Kompüterin yaddaşında 22,5 Kbayt yer tutan mətndə neçə simvol var?",
+          "answers": [
+            "23040",
+            "15911",
+            "15360",
+            "24142",
+            "23591"
+          ]
+        },
+        {
+          "question": "31. Kompüterin yaddaşında 17,5 Kbayt yer tutan mətndə neçə simvol var?",
+          "answers": [
+            "17920",
+            "11947",
+            "12924",
+            "18897",
+            "19874"
+          ]
+        },
+        {
+          "question": "32. Kompüterin yaddaşında 2 Kbayt yer tutan mətndə neçə simvol var?",
+          "answers": [
+            "2048",
+            "2682",
+            "1365",
+            "1682",
+            "2365"
+          ]
+        },
+        {
+          "question": "33. Kompüterin yaddaşında 19,5 Kbayt yer tutan mətndə neçə simvol var?",
+          "answers": [
+            "19968",
+            "21112",
+            "20540",
+            "18153",
+            "18725"
+          ]
+        },
+        {
+          "question": "34. Kompüterin yaddaşında 21 Kbayt yer tutan mətndə neçə simvol var?",
+          "answers": [
+            "21504",
+            "15077",
+            "14336",
+            "22245",
+            "22986"
+          ]
+        },
+        {
+          "question": "35. Kompüterin yaddaşında 5,5 Kbayt yer tutan mətndə neçə simvol var?",
+          "answers": [
+            "5632",
+            "5120",
+            "5363",
+            "5875",
+            "6118"
+          ]
+        },
+        {
+          "question": "36. Kompüterin yaddaşında 23 Kbayt yer tutan mətndə neçə simvol var?",
+          "answers": [
+            "23552",
+            "21411",
+            "21893",
+            "24034",
+            "24516"
+          ]
+        },
+        {
+          "question": "37. Kompüterin yaddaşında 0,75 Kbayt yer tutan mətndə neçə simvol var?",
+          "answers": [
+            "768",
+            "1237",
+            "698",
+            "1167",
+            "1706"
+          ]
+        },
+        {
+          "question": "38. Kompüterin yaddaşında 2,25 Kbayt yer tutan mətndə neçə simvol var?",
+          "answers": [
+            "2304",
+            "2740",
+            "2095",
+            "2313",
+            "2522"
+          ]
+        },
+        {
+          "question": "39. Kompüterin yaddaşında 1,25 Kbayt yer tutan mətndə neçə simvol var?",
+          "answers": [
+            "1280",
+            "2134",
+            "2988",
+            "1164",
+            "201"
+          ]
+        },
+        {
+          "question": "40. Verilmiş ədədi onluq say sistemindən 2-lik say sisteminə keçirtmək. 46(10) → X(2)",
+          "answers": [
+            "101110(2)",
+            "111010(2)",
+            "101011(2)",
+            "111111(2)",
+            "101010(2)"
+          ]
+        },
+        {
+          "question": "41. Verilmiş ədədi onluq say sistemindən 2-lik say sisteminə keçirtmək. 91(10) → X(2)",
+          "answers": [
+            "1011011(2)",
+            "1110011(2)",
+            "0111011(2)",
+            "1001110(2)",
+            "1111011(2)"
+          ]
+        },
+        {
+          "question": "42. Verilmiş ədədi onluq say sistemindən 2-lik say sisteminə keçirtmək. 28(10) → X(2)",
+          "answers": [
+            "11100(2)",
+            "10011(2)",
+            "10111(2)",
+            "10010(2)",
+            "11011(2)"
+          ]
+        },
+        {
+          "question": "43. Verilmiş ədədi onluq say sistemindən 2-lik say sisteminə keçirtmək. 37(10) → X(2)",
+          "answers": [
+            "100101(2)",
+            "111100(2)",
+            "011001(2)",
+            "101001(2)",
+            "101100(2)"
+          ]
+        },
+        {
+          "question": "44. Verilmiş ədədi onluq say sistemindən 2-lik say sisteminə keçirtmək. 54(10) → X(2)",
+          "answers": [
+            "110110(2)",
+            "100111(2)",
+            "111001(2)",
+            "111110(2)",
+            "101011(2)"
+          ]
+        },
+        {
+          "question": "45. Verilmiş ədədi ikilik say sistemindən 10-luq say sisteminə keçirtmək. 11100 (2) → X (10)",
+          "answers": [
+            "28(10)",
+            "30(10)",
+            "27(10)",
+            "54(10)",
+            "43(10)"
+          ]
+        },
+        {
+          "question": "46. Verilmiş ədədi ikilik say sistemindən 10-luq say sisteminə keçirtmək. 11110 (2) → X (10)",
+          "answers": [
+            "30(10)",
+            "32(10)",
+            "24(10)",
+            "19(10)",
+            "45(10)"
+          ]
+        },
+        {
+          "question": "47. Verilmiş ədədi ikilik say sistemindən 10-luq say sisteminə keçirtmək. 101101 (2) → X (10)",
+          "answers": [
+            "45(10)",
+            "30(10)",
+            "27(10)",
+            "44(10)",
+            "15(10)"
+          ]
+        },
+        {
+          "question": "48. Verilmiş ədədi ikilik say sistemindən 10-luq say sisteminə keçirtmək. 101110 (2) → X (10)",
+          "answers": [
+            "46(10)",
+            "35(10)",
+            "22(10)",
+            "57(10)",
+            "41(10)"
+          ]
+        },
+        {
+          "question": "49. Verilmiş ədədi ikilik say sistemindən 10-luq say sisteminə keçirtmək. 1010101 (2) → X (10)",
+          "answers": [
+            "85(10)",
+            "67(10)",
+            "54(10)",
+            "32(10)",
+            "12(10)"
+          ]
+        },
+        {
+          "question": "50. Verilmiş ədədi onluq say sistemindən 8-lik say sisteminə keçirtmək. 41(10) → X(8)",
+          "answers": [
+            "51(8)",
+            "75(8)",
+            "45(8)",
+            "43(8)",
+            "37(8)"
+          ]
+        },
+        {
+          "question": "51. Verilmiş ədədi onluq say sistemindən 8-lik say sisteminə keçirtmək. 32(10) → X(8)",
+          "answers": [
+            "40(8)",
+            "26(8)",
+            "35(8)",
+            "17(8)",
+            "54(8)"
+          ]
+        },
+        {
+          "question": "52. Verilmiş ədədi onluq say sistemindən 8-lik say sisteminə keçirtmək. 55(10) → X(8)",
+          "answers": [
+            "67(8)",
+            "62(8)",
+            "27(8)",
+            "54(8)",
+            "75(8)"
+          ]
+        },
+        {
+          "question": "53. Verilmiş ədədi onluq say sistemindən 8-lik say sisteminə keçirtmək. 97(10) → X(8)",
+          "answers": [
+            "141(8)",
+            "134(8)",
+            "73(8)",
+            "46(8)",
+            "122(8)"
+          ]
+        },
+        {
+          "question": "54. Verilmiş ədədi onluq say sistemindən 8-lik say sisteminə keçirtmək. 76(10) → X(8)",
+          "answers": [
+            "114(8)",
+            "112(8)",
+            "32(8)",
+            "57(8)",
+            "141(8)"
+          ]
+        },
+        {
+          "question": "55. Verilmiş ədədi 8-lik say sistemindən 10-luq say sisteminə keçirtmək. 22 (8) → X (10)",
+          "answers": [
+            "18(10)",
+            "46(10)",
+            "78(10)",
+            "97(10)",
+            "23(10)"
+          ]
+        },
+        {
+          "question": "56. Verilmiş ədədi 8-lik say sistemindən 10-luq say sisteminə keçirtmək. 14 (8) → X (10)",
+          "answers": [
+            "12(10)",
+            "54(10)",
+            "91(10)",
+            "53(10)",
+            "28(10)"
+          ]
+        },
+        {
+          "question": "57. Verilmiş ədədi 8-lik say sistemindən 10-luq say sisteminə keçirtmək. 70 (8) → X (10)",
+          "answers": [
+            "56(10)",
+            "60(10)",
+            "75(10)",
+            "31(10)",
+            "46(10)"
+          ]
+        },
+        {
+          "question": "58. Verilmiş ədədi 8-lik say sistemindən 10-luq say sisteminə keçirtmək. 35 (8) → X (10)",
+          "answers": [
+            "29(10)",
+            "42(10)",
+            "30(10)",
+            "55(10)",
+            "87(10)"
+          ]
+        },
+        {
+          "question": "59. Verilmiş ədədi 8-lik say sistemindən 10-luq say sisteminə keçirtmək. 43 (8) → X (10)",
+          "answers": [
+            "35(10)",
+            "76(10)",
+            "88(10)",
+            "53(10)",
+            "41(10)"
+          ]
+        },
+        {
+          "question": "60. Verilmiş ədədi onluq say sistemindən 16-lıq say sisteminə keçirtmək. 143(10) → X(16)",
+          "answers": [
+            "8F(16)",
+            "56(16)",
+            "3B(16)",
+            "67(16)",
+            "1E(16)"
+          ]
+        },
+        {
+          "question": "61. Verilmiş ədədi onluq say sistemindən 16-lıq say sisteminə keçirtmək. 318(10) → X(16)",
+          "answers": [
+            "13E(16)",
+            "25(16)",
+            "21A(16)",
+            "67(16)",
+            "90(16)"
+          ]
+        },
+        {
+          "question": "62. Verilmiş ədədi onluq say sistemindən 16-lıq say sisteminə keçirtmək. 274(10) → X(16)",
+          "answers": [
+            "112(16)",
+            "32(16)",
+            "1FE(16)",
+            "84(16)",
+            "37(16)"
+          ]
+        },
+        {
+          "question": "63. Verilmiş ədədi onluq say sistemindən 16-lıq say sisteminə keçirtmək. 69(10) → X(16)",
+          "answers": [
+            "45(16)",
+            "98(16)",
+            "4D(16)",
+            "6C(16)",
+            "69(16)"
+          ]
+        },
+        {
+          "question": "64. Verilmiş ədədi onluq say sistemindən 16-lıq say sisteminə keçirtmək. 491(10) → X(16)",
+          "answers": [
+            "1EB(16)",
+            "78(16)",
+            "53(16)",
+            "2F(16)",
+            "86(16)"
+          ]
+        },
+        {
+          "question": "65. Verilmiş ədədi 16-lıq say sistemindən 10-luq say sisteminə keçirtmək. 4E(16) → X(10)",
+          "answers": [
+            "78(10)",
+            "99(10)",
+            "64(10)",
+            "34(10)",
+            "20(10)"
+          ]
+        },
+        {
+          "question": "66. Verilmiş ədədi 16-lıq say sistemindən 10-luq say sisteminə keçirtmək. 31A(16) → X(10)",
+          "answers": [
+            "794(10)",
+            "231(10)",
+            "67(10)",
+            "136(10)",
+            "112(10)"
+          ]
+        },
+        {
+          "question": "67. Verilmiş ədədi 16-lıq say sistemindən 10-luq say sisteminə keçirtmək. 29(16) → X(10)",
+          "answers": [
+            "41(10)",
+            "65(10)",
+            "37(10)",
+            "23(10)",
+            "19(10)"
+          ]
+        },
+        {
+          "question": "68. Verilmiş ədədi 16-lıq say sistemindən 10-luq say sisteminə keçirtmək. 12D(16) → X(10)",
+          "answers": [
+            "301(10)",
+            "147(10)",
+            "44(10)",
+            "69(10)",
+            "201(10)"
+          ]
+        },
+        {
+          "question": "69. Verilmiş ədədi 16-lıq say sistemindən 10-luq say sisteminə keçirtmək. 1E8(16) → X(10)",
+          "answers": [
+            "488(10)",
+            "128(10)",
+            "57(10)",
+            "78(10)",
+            "235(10)"
+          ]
+        },
+        {
+          "question": "70. 10101001,101112 ədədini 8-lik say sistemində təsvir edin.",
+          "answers": [
+            "251,568",
+            "251,452",
+            "231,452",
+            "251,552",
+            "250,452"
+          ]
+        },
+        {
+          "question": "71. 10101010,111112 ədədini 8-lik say sistemində təsvir edin.",
+          "answers": [
+            "252,768",
+            "231,452",
+            "251,552",
+            "251,452",
+            "250,452"
+          ]
+        },
+        {
+          "question": "72. İkilik say sistemindəki 1000001 ədədi əsası 8 olan say sistemində necə yazılır?",
+          "answers": [
+            "101",
+            "115",
+            "106",
+            "124",
+            "133"
+          ]
+        },
+        {
+          "question": "73. İkilik say sistemindəki 10111111 ədədi əsası 8 olan say sistemində necə yazılır?",
+          "answers": [
+            "277",
+            "304",
+            "311",
+            "320",
+            "324"
+          ]
+        },
+        {
+          "question": "74. İkilik say sistemindəki 11000110 ədədi əsası 8 olan say sistemində necə yazılır?",
+          "answers": [
+            "306",
+            "314",
+            "323",
+            "326",
+            "330"
+          ]
+        },
+        {
+          "question": "75. 8-lik say sistemindəki 206 ədədi əsası 2 olan say sitemində necə yazılır?",
+          "answers": [
+            "10000110",
+            "10001111",
+            "10000101",
+            "10000110",
+            "10000111"
+          ]
+        },
+        {
+          "question": "76. 8-lik say sistemindəki 163 ədədi əsası 2 olan say sitemində necə yazılır?",
+          "answers": [
+            "1110011",
+            "1110110",
+            "1110011",
+            "1101100",
+            "1111011"
+          ]
+        },
+        {
+          "question": "77. 8-lik say sistemindəki 457 ədədi əsası 2 olan say sitemində necə yazılır?",
+          "answers": [
+            "100101111",
+            "100111101",
+            "111101100",
+            "100100111",
+            "110111101"
+          ]
+        },
+        {
+          "question": "78. 8-lik say sistemindəki 227 ədədi əsası 2 olan say sistemində necə yazılır?",
+          "answers": [
+            "10010111",
+            "10011011",
+            "10010110",
+            "10011011",
+            "10100011"
+          ]
+        },
+        {
+          "question": "79. 8-lik say sistemindəki 607 ədədi əsası 2 olan say sistemində necə yazılır?",
+          "answers": [
+            "110000111",
+            "100010001",
+            "11110110",
+            "100000101",
+            "10001001"
+          ]
+        },
+        {
+          "question": "80. 10101001,101112 ədədini 16-lıq say sistemində təsvir edin.",
+          "answers": [
+            "A9,B816",
+            "A9,F816",
+            "A7,B816",
+            "F9,B816",
+            "A9,B616"
+          ]
+        },
+        {
+          "question": "81. 101011,0110112 ədədini 16-lıq say sistemində təsvir edin.",
+          "answers": [
+            "2B,6C16",
+            "1B,6816",
+            "3B,6C16",
+            "2C,C616",
+            "2B,6D16"
+          ]
+        },
+        {
+          "question": "82. 10101110,10111012 ədədini 16-lıq say sistemində təsvir edin.",
+          "answers": [
+            "AE,BA16",
+            "A7,B816",
+            "A9,B616",
+            "A9,F816",
+            "F9,B816"
+          ]
+        },
+        {
+          "question": "83. 2-lik say sistemindəki 10001010 ədədi əsası 16 olan say sistemində necə yazılır?",
+          "answers": [
+            "8A",
+            "82",
+            "83",
+            "8F",
+            "88"
+          ]
+        },
+        {
+          "question": "84. 2-lik say sistemindəki 10011101 ədədi əsası 16 olan say sistemində necə yazılır?",
+          "answers": [
+            "9D",
+            "A6",
+            "97",
+            "A0",
+            "94"
+          ]
+        },
+        {
+          "question": "85. 2CE16 ədədini 2-lik say sistemində təsvir edin.",
+          "answers": [
+            "10110011102",
+            "10110011112",
+            "10111011102",
+            "11110011102",
+            "10110111102"
+          ]
+        },
+        {
+          "question": "86. 16-lıq say sistemindəki 92 ədədi əsası 2 olan say sistemində necə yazılır?",
+          "answers": [
+            "10010010",
+            "10100001",
+            "10001111",
+            "10010101",
+            "10001001"
+          ]
+        },
+        {
+          "question": "87. 16-lıq say sistemindəki 73 ədədi əsası 2 olan say sistemində necə yazılır?",
+          "answers": [
+            "1110011",
+            "1110101",
+            "1101101",
+            "1111101",
+            "1110001"
+          ]
+        },
+        {
+          "question": "88. 16-lıq say sistemindəki 4E ədədi əsası 2 olan say sistemində necə yazılır?",
+          "answers": [
+            "1001110",
+            "1001000",
+            "1010000",
+            "1001100",
+            "1011000"
+          ]
+        },
+        {
+          "question": "89. 16-lıq say sistemindəki AB ədədi əsası 2 olan say sistemində necə yazılır?",
+          "answers": [
+            "10101011",
+            "10101001",
+            "10101101",
+            "10100101",
+            "10110101"
+          ]
+        },
+        {
+          "question": "90. “Binary digit” nədir?",
+          "answers": [
+            "Bit",
+            "Bayt",
+            "Meqabit",
+            "Kilobayt",
+            "Meqabayt"
+          ]
+        },
+        {
+          "question": "91. İnformasiyanın ən kiçik ölçü vahidi nədir?",
+          "answers": [
+            "Bit",
+            "Bayt",
+            "Meqabit",
+            "Kilobayt",
+            "Meqabayt"
+          ]
+        },
+        {
+          "question": "92. 1 Kbayt neçə baytdır?",
+          "answers": [
+            "210 bayt",
+            "2 bayt",
+            "3072 bayt",
+            "220 bayt",
+            "2048 bayt"
+          ]
+        },
+        {
+          "question": "93. 1 Mbayt neçə baytdır?",
+          "answers": [
+            "220",
+            "210",
+            "2048",
+            "2220",
+            "1024"
+          ]
+        },
+        {
+          "question": "94. 1 Gbayt neçə baytdır?",
+          "answers": [
+            "230",
+            "210",
+            "233",
+            "1024",
+            "2048"
+          ]
+        },
+        {
+          "question": "95. 1 Tbayt neçə baytdır?",
+          "answers": [
+            "240",
+            "210",
+            "230",
+            "233",
+            "1024"
+          ]
+        },
+        {
+          "question": "96. 2 bayt nəyə bərabərdir?",
+          "answers": [
+            "16 bit",
+            "1 Gbayt",
+            "230 Kbayt",
+            "233 Kbayt",
+            "1 Mbayt"
+          ]
+        },
+        {
+          "question": "97. 233 bit nəyə bərabərdir?",
+          "answers": [
+            "1 Gbayt",
+            "230 Kbayt",
+            "1024 bit",
+            "233 Kbayt",
+            "1 Mbayt"
+          ]
+        },
+        {
+          "question": "98. 1 Petabayt neçə baytdır?",
+          "answers": [
+            "250",
+            "210",
+            "220",
+            "230",
+            "240"
+          ]
+        },
+        {
+          "question": "99. 4608 bit tutumlu inforsiyanın həcmi nəçə kilobaytdır?",
+          "answers": [
+            "1,5",
+            "2",
+            "1,2",
+            "12",
+            "1536"
+          ]
+        },
+
+        {
+          "question": "100. Unicode kodlaşdırmasında hər simvol nə qədər yer tutur?",
+          "answers": ["2 bayt", "5 bayt", "1 Kbayt", "15 bit", "3 bayt"]
+        },
+        {
+          "question": "101. Unicode kodlaşdırmasında “informasiya prosesləri” ifadəsi üçün nə qədər sahə ayrılır?",
+          "answers": ["44 bayt", "21 bayt", "42 bayt", "24 bayt", "26 bayt"]
+        },
+        {
+          "question": "102. 12 288 bit nəyə bərabərdir?",
+          "answers": ["4 Kbayt", "1,5 Mbayt", "1,5 Kbayt", "1,2 Kbayt", "1536 bayt"]
+        },
+        {
+          "question": "103. 24 bit neçə baytdır?",
+          "answers": ["3", "1", "4", "8", "32"]
+        },
+        {
+          "question": "104. 15360 bit neçə Kbaytdır?",
+          "answers": ["5", "8", "32", "12", "4"]
+        },
+        {
+          "question": "105. Məlumatın yazılması üçün hər səhifədə 25 sətir olmaqla 3 səhifə istifadə olunmuşdur. Hər sətirdə 60 simvol olarsa, həmin məlumatın həcmi nə qədərdir?",
+          "answers": ["4500 bayt", "4500 Kbayt", "1500 bit", "1200 Mbayt", "1536 Kbayt"]
+        },
+        {
+          "question": "106. 5 səhifəlik məlumat yaddaşda 8775 bayt yer tutur. Hər səhifədə 15 sətir olarsa, bir sətirdə neçə simvol yerləşir?",
+          "answers": ["117", "175", "200", "25", "1755"]
+        },
+        {
+          "question": "107. Mətn yaddaşda 120 bit yer tutur. Mətn neçə simvoldan ibarətdir?",
+          "answers": ["15", "12", "960", "120", "96"]
+        },
+        {
+          "question": "108. Mətn yaddaşda 80 bit yer tutur. Mətn neçə simvoldan ibarətdir?",
+          "answers": ["10", "80", "8", "64", "640"]
+        },
+        {
+          "question": "109. Mətn yaddaşda 7 Kbayt yer tutur. Mətn neçə simvoldan ibarətdir?",
+          "answers": ["7168", "56", "7", "57344", "696"]
+        },
+        {
+          "question": "110. Mətn 128 simvoldan ibarətdir. Mətn kompüterin yaddaşında nə qədər yer tutur?",
+          "answers": ["128 bayt", "128 bit", "15 bayt", "15 bit", "15 Kbayt"]
+        },
+        {
+          "question": "111. 2 səhifəlik informasiya yaddaşda 258 bayt yer tutur. Birinci səhifədəki informasiyanın həcmi ikincidən 2 dəfə çoxdur. Birinci səhifədə neçə simvol var?",
+          "answers": ["86", "43", "258", "126", "172"]
+        },
+        {
+          "question": "112. Kompüterin yaddaşının tutumunu ölçmək üçün nədən istifadə olunur?",
+          "answers": ["Bayt", "Bod", "Piksel", "Dyüm", "Punkt"]
+        },
+        {
+          "question": "113. Aşağıdakılardan hansı informasiya proseslərinə aid deyil?",
+          "answers": ["Informasiyanın tamlığı", "Informasiyanın toplanması", "Informasiyanın ötürülməsi", "Informasiyanın emalı", "Informasiyanın saxlanması"]
+        },
+        {
+          "question": "114. Müasir kompüterlərdə informasiyanın telefon kanalı vasitəsilə uzaq məsafədən qəbulu və ötürülməsi üçün hansı qurğudan istifadə olunur?",
+          "answers": ["Modem", "Printer", "Skaner", "Klaviatura", "Monitor"]
+        },
+        {
+          "question": "115. Prosessor informasiyanı hansı şəkildə emal edir?",
+          "answers": ["2-lik kodda", "10-luq kodda", "16-lıq kodda", "32-lik kodda", "8-lik kodda"]
+        },
+        {
+          "question": "116. Fərdi kompüterdə bir simvolun kodlaşdırması üçün nə qədər yer ayrılır?",
+          "answers": ["8 bit", "8 bayt", "1 Mbayt", "8 Kbayt", "1 bit"]
+        },
+        {
+          "question": "117. Bir ikilik rəqəmə nə qədər sahə ayrılır?",
+          "answers": ["1 bayt", "2 bayt", "8 bit", "8 bayt", "1 bit"]
+        },
+        {
+          "question": "118. İnformasiyanın minimal ölçü vahidi hansıdır?",
+          "answers": ["Bit", "Simvol", "Bayt", "Piksel", "Rəqəm"]
+        },
+        {
+          "question": "119. 101101- ikilik ədədi üçün yaddaşda nə qədər yer ayrılır?",
+          "answers": ["6 bit", "1 bayt", "12 bayt", "6 bayt", "8 bit"]
+        },
+        {
+          "question": "120. Hər bir səkkizlik ədəd yaddaşda neçə mərtəbədən təsvir olunur?",
+          "answers": ["3", "2", "4", "1", "5"]
+        },
+
+
+        
+  {
+    "question": "121. “İnformatika” sözünün yaddaşda saxlanması üçün nə qədər yer tələb olunur?",
+    "answers": ["11 bayt", "8 bayt", "3 bayt", "24 bayt", "88 bit"]
+  },
+  {
+    "question": "122. “İnformasiya prosesi” ifadəsi üçün yaddaşda nə qədər yer ayrılır?",
+    "answers": ["19 bayt","19 bit","17 bit","152 bayt","18 bayt"]
+  },
+  {
+    "question": "123. 18 Mbayt nəyə bərabərdir?",
+    "answers": ["9 211 Kbayt", "144 bit", "3 211Kbayt", "9 210Kbayt", "3 222bayt"]
+  },
+  {
+    "question": "124. Hesablayın: 3Mbayt + 15Kbayt =?",
+    "answers": ["3087 kbayt","3087 tbayt","18 Kbayt","18 Mbayt","3015 Mbayt"]
+  },
+  {
+    "question": "125. Hesablayn: 4 Mbayt -9 Kbayt =?",
+    "answers": ["4087 Kbayt", "13 Mbayt", "3996 Kbayt", "4086 Kbayt", "4087 Mbayt"]
+  },
+  {
+    "question": "126. 3 Mbayt nəyə bərabərdir?",
+    "answers": ["3 210 Kbayt","6 bayt","3 210bayt","3 210 bit","3 213 bayt"]
+  },
+  {
+    "question": "127. 18 Mbayt nəyə bərabərdir?",
+    "answers": ["9 *224bit", "3 *213 bayt", "9 *224 bayt", "3 *210 bit", "9 *224 Kbayt"]
+  },
+  {
+    "question": "128. 4 Mb neçə bitə bərabərdir?",
+    "answers": ["225","223","213","233","214"]
+  },
+  {
+    "question": "129. 2 bayt neçə bitdır?",
+    "answers": ["24","210","29","212","216"]
+  },
+  {
+    "question": "130. İlk cəmləyici maşın kim tərəfindən hazırlanmışdır?",
+    "answers": ["Blez Paskal", "Vilhelm Leybnis", "Çarlz Bebbic", "Con Fon Neyman", "Əl-Xorəzmi"]
+  },
+  {
+    "question": "131. Kompüter texnikasının yaranma tarixi neçənci il hesab olunur?",
+    "answers": ["1946","1948","1990","1974","1981"]
+  },
+  {
+    "question": "132. 2 nəsil kompüterlər hansı illəri əhatə edir?",
+    "answers": ["1960-1969", "1970-1985", "1950-1959", "1840-1900", "1981-ci ildən indiyə qədər"]
+  },
+  {
+    "question": "133. Bebbicin maşınının əsas xüsusiyyəti hansı tipli informasiyanı emal etmək idi?",
+    "answers": ["ikilik", "ədədi", "mətn", "səs", "qrafik"]
+  },
+  {
+    "question": "134. İlk kompüter proqramı kim tərəfindən yazılmışdır?",
+    "answers": ["Çarlz Bebbic", "Norbert Viner", "Ada Lavleys", "Hovard Ayken", "Pol Allen"]
+  },
+  {
+    "question": "135. Müasir kompüterlərin arxitekturasını kim təklif etmişdir?",
+    "answers": ["Con Fon Neyman", "Corc Bul", "Ada lavleys", "Norbert Viner", "Vilhelm Leybnis"]
+  },
+  {
+    "question": "136. İlk universal kompüter necə adlanır?",
+    "answers": ["ENİAC", "Minsk", "BESM", "İBM PC", "Dell"]
+  },
+  {
+    "question": "137. Hansı bənddə alqoritmin növləri düzgün göstərilmişdir.",
+    "answers": ["xətti,budaqlanan,dövrü","sadə, xətti ","sadə, budaqlanan ","xətti,budaqlanan, sadə ", "dövrü,sadə, budaqlanan "]
+  },
+  {
+    "question": "138. Alqoritm neçə qrupa bölünür və hansılardır?",
+    "answers": ["3-xətti, budaqlanan, dövrü","1-blok-sxem","2-romb, düzbucaq","Heç bir qrupa bölünmür","yalnız dövri"]
+  },
+  {
+    "question": "139. Aşağıdakılardan hansı alqoritmin quruluşuna görə növüdur",
+    "answers": ["xətti","müəyyənlik","kütləvilik","nəticəlik", "diskretlik"]
+  },
+  {
+    "question": "140. Hansı alqoritmlər yazıldıqları ardıcılıqla bir dəfə yerinə yetirilir.",
+    "answers": ["xətti","budaqlanan","dövrü","çoxqat dövr","heç biri"]
+  },
+  {
+    "question": "141. Bir-birinin ardınca yerinə yetirilən əməliyyat hansı növ alqoritmə aiddir?",
+    "answers": ["xətti","mürəkkəb dövr","dövrü","budaqlanan","sadə dövr"]
+  },
+  {
+    "question": "142. Xətti alqoritmlər______________",
+    "answers": ["bir neçə ardıcıl əməliyyatlardan ibarət olur.","tərkibində bir və ya bir neçə məntiq mərhələsi olur.","tərkibində tez-tez eyni əməliyyatlar qrupunun çoxlu sayda təkrar olunması baş verir.","tərkibində bir dövr olur.","tərkibində bir neçə daxili dövr iştirak edir."]
+  },
+  {
+    "question": "143. _____________ sadə hesablama prosesini ifadə edən bir neçə ardıcıl əməliyyatlardan ibarət olur",
+    "answers": ["xətti alqoritmlər","budaqlanan alqoritmlər","dövrü alqoritmlər","riyazi alqoritmlər","önşərt alqoritmlər"]
+  },
+  {
+    "question": "144. Hansı alqoritmlər verilmiş şərtin yerinə yetirilib-yetirilməməsinə görə müxtəlif istiqamətlərdə davam etdirilir.",
+    "answers": ["budaqlanan","dövrü","xətti","çoxqat dövr", "heç biri"]
+  },
+  {
+    "question": "145. Alqoritmin quruluşuna görə növüdur",
+    "answers": ["budaqlanan","müəyyənlik","kütləvilik","nəticəlik","diskretlik"]
+  },
+  {
+    "question": "146. Alqoritmdə şərt olarsa, hansı alqoritmə aid etmək olar",
+    "answers": ["budaqlanan","şərti","dövrü və budaqlanan","dövrü","xətti"]
+  },
+  {
+    "question": "147. Sxematik olaraq göstərilən alqoritm",
+    "answers": ["budaqlanan","mürəkkəb dövr","xətti","dövrü","sadə dövr"]
+  },
+  {
+    "question": "148. Budaqlanan alqoritmlərin tərkibində ......",
+    "answers": ["bir və ya bir neçə məntiq mərhələsi olur","tez-tez eyni əməliyyatlar qrupunun çoxlu sayda təkrar olunması baş verir","bir dövr olur","bir neçə daxili dövr iştirak edir","bir neçə ardıcıl əməliyyatlardan ibarət olur"]
+  },
+  {
+    "question": "149. Hansı alqoritmlərdə alqoritmin müəyyən mərhələləri təkrarlanır",
+    "answers": ["dövrü", "budaqlanan", "xətti", "xətti və köməkçi", "heç biri"]
+  },
+  {
+    "question": "150. Eyni bir düsturla dəyişənin müxtəlif qiymətlərində dəfələrlə hesablama aparmaq hansı alqoritmə aiddir:",
+    "answers": ["dövrü","mürəkkəb dövr", "budaqlanan", "xətti", "sadə dövr"]
+  },
+
+
+
+
+  
+    {
+        "question": "150. Eyni bir düsturla dəyişənin müxtəlif qiymətlərində dəfələrlə hesablama aparmaq hansı alqoritmə aiddir:",
+        "answers": ["dövrü", "mürəkkəb dövr", "budaqlanan", "xətti", "sadə dövr"]
+    },
+    {
+        "question": "151. Dövrü alqoritm bölünür:",
+        "answers": ["sadə və mürəkkəb dövr", "xətti və budaqlanan", "qeyri xətti və xətti", "budaqlanan və sadə dövr", "mürəkkəb dövrü və qeyri xətti"]
+    },
+    {
+        "question": "152. Tərkibində hər hansı proses təkrarlanırsa bu alqoritmlərə __________ deyilir.",
+        "answers": ["dövrü alqoritmlər", "budaqlanan alqoritmlər", "xətti alqoritmlər", "riyazi alqoritmlər", "önşərt alqoritmləri"]
+    },
+    {
+        "question": "153. Aşağıda xətti alqoritmlər haqqında deyilənlərdən biri doğrudur.",
+        "answers": ["alqoritmin mərhələləri ardıcıl olaraq bir dəfə icra olunur.", "xətti alqoritmin tərkibində seçmə bloku olur.", "xətti alqoritmdə müəyyən bir hissə təkrarlanır.", "xətti alqoritmlər dörd tipə bölünur.", "tərkibində məntiqi blok olan hesablama prosesini təsvir edir."]
+    },
+  
+    {
+        "question": "156. Budaqlanan alqoritmin tərkibində",
+        "answers": ["şərti keçid bloku var", "dövrü blok var", "dövrü və çap bloku var", "hesabi və dövrü blok var", "dövrü, şərtikeçid və hesabi blok var"]
+    },
+    {
+        "question": "157. Xətti alqoritmint ərkibində",
+        "answers": ["hesabi blok var", "dövrü bloklar var", "dövrü və şərti blok var", "heç biri", "məntiqi bloklar var"]
+    },
+    {
+        "question": "158. Şərt bloku hansı həndəsi fiqurla göstərilir?",
+        "answers": ["romb", "paralleloqram", "düzbuczqlı", "altıbucaqlı", "beşbucaqlı"]
+    },
+    {
+        "question": "159. Hansı blok bütün alqoritmlərdə istifadə edilir?",
+        "answers": ["Başlanğıc və son bloku", "Alt proqram", "Şərt", "Dövr", "Hesablama"]
+    },
+    
+    {
+        "question": "165. 100 ədəd içərisində ən kiçik ədədin tapılması hansı alqoritmə aiddir?",
+        "answers": ["dövrü", "xətti", "mürəkkəb", "budaqlanan", "xətti-budaqlanan"]
+    },
+    {
+        "question": "166. x=0.5 olduqda y=3x2+5 funksiyasının qiymətinin hesablanması hansı alqoritmə aiddir",
+        "answers": ["xətti", "budaqlanan", "dövrü", "çoxqat dövr", "heç biri"]
+    },
+    {
+        "question": "167. x-in 1-dən 10-a qədər qiymətlərində y=1/(x2+5) funksiyasının qiymətinin hesablanması hansı alqoritmə aiddir.",
+        "answers": ["dövrü", "xətti", "budaqlanan", "xətti və budaqlanan", "heç biri"]
+    },
+    {
+        "question": "168. x və y ədədləri verilib. Onların cəmi müsbətdirsə,o zaman P=x2+y. Cəm mənfi olduqda, P=(x+y)2.Cəm sıfra bərabər olduqda, P-nin də qiyməti sıfra bərabərdir. P-nin hesablanması, alqoritmin hansı növünə aiddir.",
+        "answers": ["budaqlanan", "xətti", "dövrü", "xətti və dövrü", "heç biri"]
+    },
+   
+    {
+        "question": "172. A və B ədədlərinin cəminin hesablanması hansı alqoritmə aiddir.",
+        "answers": ["xətti", "dövrü", "budaqlanan", "köməkçi", "heç biri"]
+    },
+ 
+    {
+        "question": "180. Paskal dilində 11 DİV 5 əməliyyatın nəticəsi hansıdır.",
+        "answers": ["2", "2.5", "1", "1.5", "0.5"]
+    },
+    {
+        "question": "181. Paskal dilində 11 MOD 5 əməliyyatın nəticəsi hansıdır.",
+        "answers": ["1", "1.5", "2", "2.5", "0.5"]
+    },
+    {
+        "question": "182. Paskal dilində 10 DİV 3 əməliyyatın nəticəsi hansıdır.",
+        "answers": ["3", "3.5", "1", "1.5", "0.5"]
+    },
+ 
+    {
+        "question": "183. Paskal dilində 10 MOD 3 əməliyyatın nəticəsi hansıdır.",
+        "answers": ["1", "1.5", "3", "3.5", "0.5"]
+    },
+    {
+        "question": "184. Paskal dilində 25 DİV 2 əməliyyatın nəticəsi hansıdır.",
+        "answers": ["12", "1", "12.5", "13", "14"]
+    },
+    {
+        "question": "185. Paskal dilində 25 MOD 2 əməliyyatın nəticəsi hansıdır.",
+        "answers": ["1", "1.5", "12", "12.5", "14"]
+    },
+  
+    {
+        "question": "186. X=85.53 olduqda TRUNC(X) nəyə bərabərdir ?",
+        "answers": ["85", "83", "86", "53", "54"]
+    },
+    {
+        "question": "187. X=221.53 olduqda ROUND(X) nəyə bərabərdir ?",
+        "answers": ["222", "212", "252", "231", "220"]
+    },
+
+
+    {
+        "question": "188. X=421.53 olduqda TRUNC(X) nəyə bərabərdir ?",
+        "answers": ["421", "423", "422", "424", "425"]
+    },
+    {
+        "question": "189. X=820.53 olduqda ROUND(X) nəyə bərabərdir ?",
+        "answers": ["821", "822", "820", "854", "853"]
+    },
+    {
+        "question": "190. Paskal dilində x2 necə yazılır",
+        "answers": ["SQR(x)", "SQRT(x)", "EXP(x)", "ABS(x)", "TAN(x)"]
+    },
+
+    
+    {
+        "question": "201. Tam tipli U dəyişəninin qiyməti neçədir? U := 180 div 10 mod 12",
+        "answers": ["6", "7", "1", "9", "3"]
+    },
+    {
+        "question": "202. Tam tipli U dəyişəninin qiyməti neçədir? U := 260 div 6 mod 9",
+        "answers": ["7", "8", "2", "0", "13"]
+    },
+    {
+        "question": "203. Tam tipli T dəyişəninin qiyməti neçədir? T := 84 div 14 mod 5",
+        "answers": ["1", "8", "5", "2", "4"]
+    },
+    {
+        "question": "204. Tam tipli U dəyişəninin qiyməti neçədir? U := 29 div 11 mod 2",
+        "answers": ["0", "6", "2", "10", "1"]
+    },
+    {
+        "question": "205. Tam tipli R dəyişəninin qiyməti neçədir? R := 160 div 8 mod 8",
+        "answers": ["4", "6", "9", "1", "0"]
+    },
+    {
+        "question": "206. Tam tipli U dəyişəninin qiyməti neçədir? U := 130 div 3 div 7",
+        "answers": ["6", "2", "5", "8", "1"]
+    },
+    {
+        "question": "207. Tam tipli Y dəyişəninin qiyməti neçədir? Y := 280 div 15 div 11",
+        "answers": ["1", "5", "8", "0", "2"]
+    },
+    {
+        "question": "208. Tam tipli U dəyişəninin qiyməti neçədir? U := 130 div 5 mod 7",
+        "answers": ["5", "4", "3", "2", "1"]
+    },
+    {
+        "question": "209. Tam tipli U dəyişəninin qiyməti neçədir? U := 130 div 5 div 7",
+        "answers": ["3", "5", "4", "2", "1"]
+    },
+    {
+        "question": "210. Tpascalda olan tiplər",
+        "answers": ["tam,məntiqi,simvol", "Compleks,form,məntiqi", "Compleks,məntiqi,tam", "smool,compleks,həqiqi", "tam,simvol,həqiqi"]
+    },
+    {
+        "question": "211. Tam tipli U dəyişəninin qiyməti neçədir? U := 120 div 5 div 7",
+        "answers": ["3", "5", "7", "2", "1"]
+    },
+    {
+        "question": "212. Tam tipli T dəyişəninin qiyməti neçədir? T := 26 mod 13 mod 11",
+        "answers": ["0", "6", "3", "8", "1"]
+    },
+    {
+        "question": "213. Tpascal M2>M1 , addım 1 olduqda parametrli dövri operator necə yazılar?",
+        "answers": ["FOR I: =M1 TO M2 DO", "FOR I:=M1 DO M2 TO S", "FOR i:=M1 TO M2 DO S", "FOR I:=M1 DOWNTO M2 DO S", "FOR I=M1 DOWNTO M2"]
+    },
+    {
+        "question": "214. Tpascal M2>M1 , addım 2 olduqda parametrli dövri operator necə yazılar?",
+        "answers": ["FOR I: =M1 TO M2 DO 2", "FOR I:=M DO M1 TO 2", "FOR i:=M1 TO M2 DO S", "FOR I:=M1 DOWNTO M2 DO S", "FOR I=M1 DOWNTO M2"]
+    },
+    {
+        "question": "215. N1<M2 , dəyişəni addımı 1 olduqda parametrli dövri operator necə yazılar?",
+        "answers": ["FOR I: =M2 TO N1 DO", "FOR I:=N1 DO M2 TO S", "FOR i:=N1 TO M2 DO S", "FOR I:=N1 DOWNTO M2 DO S", "FOR I=M1 DOWNTO M2"]
+    },
+
+    
+    {
+        "question": "216. Tpascal proqramda for n:=1 to 5 do\nfor k:=1 to 5 do\nif n>k then A[n,k]:=n+k\nelse A[n,k]:=n*k;\nA[n,k] masivinin neçə elementli olur.",
+        "answers": ["25", "23", "27", "15", "16"]
+    },
+    {
+        "question": "217. Tpascal proqramda for n:=1 to 2 do\nfor k:=1 to3 do\nif n>k then A[n,k]:=n+k\nelse A[n,k]:=n*k;\nA[2,3] masivinin neçə elementli olur.",
+        "answers": ["6", "3", "9", "5", "4"]
+    },
+    {
+        "question": "218. Tpascal proqramda for n:=1 to 2 do\nfor k:=1 to 2 do\nif n>k then A[n,k]:=n+k\nelse A[n,k]:=n*k;\nA[2,2] masivinin neçə elementli olur.",
+        "answers": ["4", "9", "5", "6", "3"]
+    },
+    {
+        "question": "219. Tpascal y:=0; İF X>0 then If x>6 then y:=5 else y:=7\nX=4;a=3,b=5 olduqda y=? olar",
+        "answers": ["7", "2", "1", "0:2", "1;2"]
+    },
+    {
+        "question": "220. Tpascal y:=0; İF X>0 then If x>6 then y:=x else y:=b+1\nX=4;a=3,b=5 olduqda y=? olar",
+        "answers": ["6", "2", "1", "5", "1;2"]
+    },
+    {
+        "question": "221. Tpascal y:=0; İF X>0 then If x<6 then y:=A+B else y:=a\nX=4;a=3,b=5 olduqda y=? olar",
+        "answers": ["8", "2", "1", "7", "3"]
+    },
+    {
+        "question": "222. Tpascal y:=0; İF X>0 then If x<6 then y:=1 else y:=2\nX=4;a=3,b=5 olduqda y=? olar",
+        "answers": ["1", "2", "1", "0:2", "1;2"]
+    },
+    {
+        "question": "223. Tpascal proqramda for n:=1 to 5 do\nfor k:=1 to 3 do\nif n>k then A[n,k]:=n+k\nelse A[n,k]:=n*k;\nA[n,k] masivinin neçə elementli olur.",
+        "answers": ["15", "13", "10", "12", "16"]
+    },
+    {
+        "question": "224. Tpascal proqramda for n:=1 to 12 do\nfor k:=1 to 13 do\nif n>k then A[n,k]:=n+k\nelse A[n,k]:=n*k;\nA[N,K] masivinin neçə elementli olur.",
+        "answers": ["156", "136", "96", "145", "45"]
+    },
+
+
+    
+    {
+        "question": "225. Tpascal proqramda for n:=1 to 9 do\nfor k:=1 to 9 do\nif n>k then A[n,k]:=n+k\nelse A[n,k]:=n*k;\nA[N,K] masivinin neçə elementli olur.",
+        "answers": ["81", "9", "8", "63", "19"]
+    },
+    {
+        "question": "226. Tpascal y:=0; İF X>0 then If x>6 then y:=5+3 else y:=7-2\nX=4;a=3,b=5 olduqda y=? olar",
+        "answers": ["5", "8", "7", "0", "10"]
+    },
+    {
+        "question": "227. Tpascal y:=0; İF X>0 then If x>6 then y:=x+3 else y:=b+1\nX=4;a=3,b=5 olduqda y=? olar",
+        "answers": ["6", "7", "8", "5", "12"]
+    },
+    {
+        "question": "228. Tpascal y:=0; İF X>0 then If x<6 then y:=A-B else y:=a\nX=4;a=3,b=5 olduqda y=? olar",
+        "answers": ["-2", "2", "1", "5", "3"]
+    },
+    {
+        "question": "229. Tpascal y:=0; İF X>0 then If x<6 then y:=4 else y:=2\nX=4;a=3,b=5 olduqda y=? olar",
+        "answers": ["4", "2", "1", "0", "12"]
+    },
+    {
+        "question": "230. Tpascal proqramda for n:=1 to 5 do\nfor k:=1 to 2 do\nif n>k then A[n,k]:=n+k\nelse A[n,k]:=n*k;\nA[n,k] masivinin neçə elementli olur.",
+        "answers": ["10", "13", "14", "15", "6"]
+    },
+    {
+        "question": "231. Tpascal proqramda for n:=1 to 2 do\nfor k:=1 to 4 do\nif n>k then A[n,k]:=n+k\nelse A[n,k]:=n*k;\nA[N,K] masivinin neçə elementli olur.",
+        "answers": ["8", "7", "9", "5", "4"]
+    },
+    {
+        "question": "232. Tpascal proqramda for n:=1 to 2 do\nfor k:=1 to 5 do\nif n>k then A[n,k]:=n+k\nelse A[n,k]:=n*k;\nA[N,K] masivinin neçə elementli olur.",
+        "answers": ["10", "9", "5", "6", "4"]
+    },
+    {
+        "question": "233. Tpascal y:=0; İF X>0 don't then If x>6 then y:=5 else y:=7\nX=-3;a=3,b=5 olduqda y=? olar",
+        "answers": ["7", "2", "1", "12", "6"]
+    },
+
+    
+    {
+        "question": "234. Paskal dilində 16 DİV 5 əməliyyatın nəticəsi hansıdır.",
+        "answers": ["3", "2.5", "1", "1.5", "0.5"]
+    },
+    {
+        "question": "235. Tpascal y:=0; İF X>0 then If x>6 then y:=x else y:=b\nX=5;a=3,b=5 olduqda y=? olar",
+        "answers": ["5", "2", "1", "5", "12"]
+    },
+    {
+        "question": "236. Tpascal y:=0; İF X>0 then If x>6 then y:=A+B else y:=a\nX=14;a=3,b=15 olduqda y=? olar",
+        "answers": ["18", "12", "16", "17", "13"]
+    },
+    {
+        "question": "237. y:=0; İF X>0 then If x<6 then y:=1+A else y:=2+B\nX=4;a=3,b=5 olduqda y=? olar",
+        "answers": ["4", "2", "1", "3", "5"]
+    },
+    {
+        "question": "238. Tpascal P: =B [1]; FOR K=2 TO 9 DO\nIF (P <= B [I]) THEN P: = B[I] ; hansı proqramdır",
+        "answers": ["max tapılması", "min tapılması", "son cəmin", "son hasilin", "önşərtli dövrün"]
+    },
+    {
+        "question": "239. Tpascal P: =B [1]; FOR K=2 TO 6 DO\nIF (P >= B [I]) THEN P: = B[I] ELSE P:=B[I]\nprogramında b=5,7,3,6,8,2 olarsa p=?",
+        "answers": ["2", "7", "6", "8", "3"]
+    },
+    {
+        "question": "240. Tpascal P: =B [1]; FOR K=2 TO 6 DO\nIF P <= B [I] THEN P: = B[I] ;\nprogramında b=5,3,11,8,2 olarsa p=?",
+        "answers": ["11", "10", "2", "8", "9"]
+    },
+    {
+        "question": "241. Tpascal P: =B [1]; FOR K=2 TO 9 DO\nIF (P <= B [I]) THEN P: = B[I];\nB=4,6,7,-3,17,-8,-2,2,9 qiymətində p=?",
+        "answers": ["17", "4", "9", "2", "-8"]
+    },
+    {
+        "question": "242. Tpascal P: =B [1]; FOR K=2 TO 6 DO\nIF (P >= B [I]) THEN P: = B[I] ;\nprogramında b=7,5,6,8,12 olarsa p=?",
+        "answers": ["5", "10", "21", "11", "9"]
+    },
+    {
+        "question": "243. Tpascal P: =B [1]; FOR K=2 TO 6 DO\nIF (P >= B [I]) THEN P: = B[I] ;\nprogramında b=5,3,1,8,2 olarsa p=?",
+        "answers": ["1", "10", "21", "11", "9"]
+    },
+    {
+        "question": "244. P: =B [1]; FOR K=2 TO 9 DO\nIF (P >= B [I]) THEN P: = B[I]; hansı proqramdır",
+        "answers": ["min tapılması", "max tapılması", "son cəmin", "son hasilin", "önşərtli dövrün"]
+    },
+
+    
+    {
+        "question": "245. Tpascal Bu P=1; FOR K:-1 TO 10\nP: = P * A[ K ] hansı proqramdır?",
+        "answers": ["dövrü", "budalana", "Xəti", "xətti, budalana", "mürəkkəb dövrü"]
+    },
+    {
+        "question": "246. Tpascal Bu P=1; FOR K:-1 TO 10\nP: = P * A[ K ] hansı proqramdır?",
+        "answers": ["son hasilin", "max tapılması", "son cəmin", "min tapılması", "önşərtli dövrün"]
+    },
+    {
+        "question": "247. Tpascal Bu P=0; FOR K:-1TO10\nP: = P + A[ K ] hansı proqramdır?",
+        "answers": ["son cəmin", "max tapılması", "son hasilin", "min tapılması", "önşərtli dövrün"]
+    },
+    {
+        "question": "248. Tpascal Bu P=1; FOR K:-1 TO 20\nP: = P +A[ K ]hansı proqramdır?",
+        "answers": ["dövrü", "budalana", "xətti", "xətti, budalana", "mürəkkəb dövrü"]
+    },
+    {
+        "question": "249. Tpascal A : = X [ 1 ]; FOR I : = 2 TO7 DO\nIF (A <= X [ I ]) THEN A : = X [ I ]\nBu proqram hansı proqramdır?",
+        "answers": ["ən böyük qiymətin tapılması", "ən kiçik qiymətin tapılması", "soncəmin", "sonhasilin", "önşərtli dövrün"]
+    },
+    {
+        "question": "250. Tpascal S=0; FOR I:=1 TO 5 DO\nFOR J:=1 TO 6 DO\nS:=S+A[I,J]; hansı dövrdür?",
+        "answers": ["mürəkkəb dövr", "sonşərtli", "dövrmü", "önşərtli,sonşərtli", "şərt"]
+    },
+    {
+        "question": "251. Tpascal P:=1; FOR I:1 TO 3 DO\nS:=0\nFOR K:=1 TO 3 DO proqramda hansı mürəkkəb dövrdür?\nS:=S+A[K]\nP:=P*S",
+        "answers": ["cəmlə hasilin", "hasilin", "cəmin", "hasil cəm", "xətti"]
+    },
+    
+    {
+        "question": "252. Tpascal A : = 1, B : = 2, C : = 3\nIF A*B < C THEN Y: = 5*A + B + C ELSE Y: = 6*A - 5*C\nİfadəsinin qiyməti nəyə bərabərdir?",
+        "answers": ["10", "11", "12", "-9", "-8"]
+    },
+    {
+        "question": "253. Tpascal S=0; FOR I : = 1 TO 4 DO\nFOR J : = 1 TO 7 DO\nS : = S + A [ I , J ] ; hansı dövrdür?",
+        "answers": ["mürəkkəb", "sonşərtli", "önşərtli", "önşərtli, sonşərtli", "şərt"]
+    },
+    {
+        "question": "254. Tpascal S=0; FOR I : = 1 TO 15 DO\nFOR J : = 1 TO 16 DO\nS : = S + A [ I , J ] ; hansı dövrdür?",
+        "answers": ["mürəkkəb dövr", "sonşərtli", "dövrmü", "önşərtli , sonşərtli", "şərt"]
+    },
+    {
+        "question": "255. Tpascal P : = 0 ; FOR I:1 TO 3 DO\nS=1\nFOR K:1 TO 3 DO proqramda hansı mürəkkəb dövrdür?\nP:P*S\nS:S+A[K]",
+        "answers": ["hasil cəm", "hasilin", "cəmin", "cəm hasil", "xətti"]
+    },
+    {
+        "question": "256. Tpascal A=1,4,6,5,3,2 olarsa S=0; FOR I:1 TO 4 DO\nFOR J:1 TO 7 DO\nS:S+A[I,J]; dövründə s=?",
+        "answers": ["21", "22", "18", "31", "24"]
+    },
+    {
+        "question": "257. A=11,14,16,5,3,2 olarsa S=0; FOR I:1 TO 2 DO\nFOR J:3 TO 7 DO\nS:S+A[I,J]; dövründə s=?",
+        "answers": ["51", "42", "48", "41", "24"]
+    },
+    {
+        "question": "258. Tpascal A=21,4,6,25,3,22 olarsa S=0; FOR I:1 TO 4 DO\nFOR J:1 TO 7 DO\nS:S+A[I,J]; dövründə s=?",
+        "answers": ["81", "72", "88", "81", "94"]
+    },
+    {
+        "question": "259. Tpascal Ön şərtli opertoru ilə cəmlə.\nn=5 elementin cəmini tapın.\nBegin S : = 0 ; I : = 1 ; while I < n do\nbegin\ns : = S + i\ni : = i + 1\nEND.",
+        "answers": ["10", "15", "13", "14", "16"]
+    },
+    {
+        "question": "260. Tpascal Ön şərtli opertoru ilə cəmlə.\nn=6 elementin cəmini tapın.\nBegin S : = 0 ; I : = 1 ; while I < n do\nbegin\ns : = S + i\ni : = i + 1\nEND.",
+        "answers": ["15", "13", "12", "14", "16"]
+    },
+    {
+        "question": "261. Tpascal Ön şərtli opertoru ilə cəmlə.\nn=7 elementin cəmini tapın.\nBegin S : = 0 ; I : = 1 ; while I < n do\nbegin\ns : = S + i\ni : = i + 1\nEND.",
+        "answers": ["21", "25", "23", "24", "16"]
+    },
+    {
+        "question": "262. Tpascal Ön şərtli opertoru ilə cəmlə.\nn=8 elementin cəmini tapın.\nBegin S : = 0 ; I : = 1 ; while I < n do\nbegin\ns : = S + i\ni : = i + 1\nEND.",
+        "answers": ["28", "25", "33", "34", "26"]
+    },
+    
+    {
+        "question": "263. Tpascal Ön şərtli opertoru ilə cəmlə.\nn=9 elementin cəmini tapın.\nBegin S:=0; I:=1; while I < n do\nbegin\ns:=S + i\ni:=i + 1\nEND:",
+        "answers": ["36", "35", "33", "34", "46"]
+    },
+    {
+        "question": "264. Tpascal begin P:=1; For K:=1 to 5 do\np:=p*A[i]; hansı proqramdır",
+        "answers": ["dövrü", "budaqlanan", "xətti", "xətti - budaqlanan", "dövrü - budaqlanan"]
+    },
+    {
+        "question": "265. Tpascal A=2, 3, 4 olarsa begin P:=1; For i:=1 to 3 do\np:=p*A[i]; proqramda p=?",
+        "answers": ["24", "12", "8", "26", "18"]
+    },
+    {
+        "question": "266. Tpascal A=5, 3, 4 olarsa begin P:=1; For i:=1 to 3 do\np:=p*A[i]; proqramda p=?",
+        "answers": ["60", "62", "20", "26", "15"]
+    },
+    {
+        "question": "267. Tpascal programda: a=2,-3,4,5,-6,7,8,12,-4,-5\ns:=0;\nfor k:=1 to 10 do\nif a[k]>0 then s:=s+ a[k];\na masivinin müsbət elementlərində s neçə olar.",
+        "answers": ["38", "35", "42", "21", "30"]
+    },
+    {
+        "question": "268. Tpascal programda: a=14,-13,4,15,-6,17,8,12,-4,-15\ns:=0;\nfor k:=1 to 10 do\nif a[k]>0 then s:=s + a[k];\ns neçə olar.",
+        "answers": ["70", "75", "72", "78", "36"]
+    },
+    {
+        "question": "269. Tpascal programında: a=22,-23,4,25,-46,17,8,12,-4,-5\ns:=0;\nfor k:=1 to 10 do\nif a[k]>0 then s:=s + a[k];\nneçə olar.",
+        "answers": ["88", "78", "83", "84", "90"]
+    },
+    {
+        "question": "270. Tpascal programında: a=2,-3,4,5,-6,7,8,12,-4,-5\ns:=0;\nfor k:=1 to 10 do\nif a[k]<0 then s:=s + a[k];\ns neçə olar.",
+        "answers": ["-18", "-15", "12", "-21", "30"]
+    },
+    {
+        "question": "271. Tpascal programında: a=2,-3,4,5,-6,7,0,2,-4,-5\ns:=0;\nfor k:=1 to 10 do\nif a[k]>0 then s:=s + a[k];\ns neçə olar.",
+        "answers": ["20", "15", "12", "21", "30"]
+    },
+    
+      ];
+
+
+      function shuffleAnswers(answers) {
+        for (let i = answers.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [answers[i], answers[j]] = [answers[j], answers[i]];
+        }
+      }
+
+
+      const container = document.querySelector('p');
+      questions.forEach(q => {
+        const questionElement = document.createElement('div');
+        questionElement.innerHTML = `<br><br>${q.question}<br>`;
+
+        shuffleAnswers(q.answers);
+
+        const options = ['A)', 'B)', 'C)', 'D)', 'E)'];
+
+
+        q.answers.forEach((answer, index) => {
+          questionElement.innerHTML += `${options[index]} ${answer}<br>`;
+        });
+
+        container.appendChild(questionElement);
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+  <style>
+    body {
+      font-family: monospace;
+      margin: 0;
+      padding: 1rem;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+
+      justify-content: center;
+    }
+
+    p {
+      font-size: 16px;
+      margin-left: 2rem;
+    }
+
+    .questions {
+     
+      border-radius: 15px;
+background-color: rgb(245, 245, 245);
+border: 1px solid rgb(187, 187, 187);
+    }
+  </style>
+
+  <div class="questions">
+    <p>
+
+    </p>
+  </div>
+</body>
+
+</html>
